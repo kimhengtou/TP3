@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        table{
+           width: 100%;
+           border-spacing: 30px;
+        }
+        .t1{
+            border-spacing: 0px;
+        }
+        #submit{
+            background-color: blue;
+            float: right;
+            margin: 30px;
+        }
+        html{
+            border:black; border-width:5px; border-style:solid;
+        }
+    </style>
+</head>
+<body>
+    <form action="/my-backend/profile" method="post">
+        <table class="t1">
+            <tr>
+                <td colspan="2" style="border: 1px solid black; background-color: gray; color: #fff;">
+                    <h2>Tell Us About Yourself</h2>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td colspan="2">
+                    <h3>Profile Information</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>Last Name</div>
+                    <input name="firstName" type="text"  style="width: 100%;">
+                </td> 
+                <td>
+                    <div>First Name</div>
+                    <input name="lastName" type="text" style="width: 100%;">
+                </td>  
+            </tr>
+            <tr>
+                <td>
+                    <div>Email</div>
+                    <input name="email" type="text"  style="width: 100%;">
+                </td> 
+                <td>
+                    <div>Phone</div>
+                    <input name="phone" type="text" style="width: 100%;">
+                </td>   
+            </tr>
+            <tr>
+                <td>
+                    <table class="t1">
+                        <tr>
+                            <td>
+                                <span>Gneder</span>
+                            </td>
+                            <td>
+                                <input name="gender" type="radio" value="male"/>Male 
+                                <input name="gender" type="radio" value="female"/>Female 
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            
+        </table>  
+            <hr>   
+        <table>
+            <tr>
+                <td><h3>Current Address</h3></td>
+            </tr>
+            <tr>  
+                <td >
+                    <input name="city" list="city" placeholder="City/Province" style="width: 100%;">
+                    <datalist id="city">
+                        <option value="Phnom Penh"></option>
+                        <option value="Kandal"></option>
+                        <option value="Prey Veng"></option>
+                        <option value="Pursat"></option>
+                        <option value="Rattanakiri"></option>
+                        <option value="Rathanakiri"></option>
+                        <option value="Siem Peap"></option>
+                        <option value="Sihannouk ville"></option>
+                        <option value="Svay Rieng"></option>
+                        <option value="Takeo"></option>
+                        <option value="Kampong Thom"></option>
+                        <option value="Oddor Meanchey"></option>
+                        <option value="Pailin"></option>
+                        <option value="Battambang"></option>
+                        <option value="Kampong Chhnang"></option>
+                        <option value="Kampong Cham"></option>
+                        <option value="Kampong Speu"></option>
+                        <option value="Kep"></option>
+                        <option value="Kampot"></option>
+                        <option value="Koh Kong"></option>  
+                    </datalist>
+                  </td>     
+                <td >
+                  <input name="Country" list="countries" placeholder="Country" style="width: 100%;">
+                  <datalist id="countries">
+                      <option value="Cambodia"></option>
+                      <option value="Thailand"></option>
+                      <option value="Japan"></option>
+                      <option value="USA"></option>
+                      <option value="England"></option>
+                      <option value="Canada"></option>
+                      <option value="Vietnam"></option>
+                      <option value="Laos"></option>
+                      <option value="Myanmar"></option>
+                      <option value="Philippines"></option>
+                      <option value="Indonesia"></option>
+                      <option value="Singapore"></option>
+                      <option value="Brunei"></option>
+                      <option value="Malaysia"></option>
+                      <option value="India"></option>
+
+                  </datalist>
+                </td>
+                <td>
+                     <input name="Postcode" type="text" placeholder="Post Code" style="width: 100%;">                      
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    <textarea name="address" cols="140 rows="3">Address</textarea>
+                </td>
+            </tr>
+        </table>
+        <table >
+            <tr>
+                <td>
+                    <h3>Skills</h3>
+                </td>
+                <td></td>
+                <td>
+                    <h3>Languages</h3>
+                </td>
+            </tr>
+            <tr>
+              <td>
+                <input name="skills" type="checkbox" value="designing"/> Designing 
+              </td>
+              <td>
+                <input name="skills" type="checkbox" value="Database"/> Database Management
+              </td>
+              <td>
+                <input name="skills" type="checkbox" value="english"/> English
+              </td>
+              <td>
+                <input name="skills" type="checkbox" value="chinese"/> Chinese
+              </td>
+            </tr>
+            <tr>
+                <td>                    
+                    <input name="skills" type="checkbox" value="coding"/> Coding                
+                </td>  
+                <td>
+                    <input name="skills" type="checkbox" value="debug"/> Debug
+                </td>   
+                <td>
+                    <input name="skills" type="checkbox" value="French"/> French
+                </td>        
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td><h3>Experience</h3></td>
+            </tr>
+            <tr>
+                <td><h4>From</h4></td>
+                <td><h4>To</h4></td>
+                <td colspan="2"><h4>Description</h4></td>
+            </tr>
+            <tr>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 100%;"></td>
+            </tr><tr>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 100%;"></td>
+            </tr><tr>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 75%;"></td>
+                <td><input type="text" style="width: 100%;"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h3>Choose your Profile Photo</h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input name="file" type="file">
+                </td>
+            </tr>        
+        </table> 
+        <button id="submit" type="submit" style="justify-content: flex-end;">Submit</button>
+    </form>
+</body>
+</html>
